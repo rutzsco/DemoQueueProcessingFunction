@@ -7,7 +7,7 @@ namespace DemoQueueProcessig
     public static class Function1
     {
         [FunctionName("Function1")]
-        public static void Run([ServiceBusTrigger("myqueue3", AccessRights.Manage, Connection = "ServiceBusConnectionString")]string myQueueItem, TraceWriter log)
+        public static void Run([ServiceBusTrigger("myqueue1", AccessRights.Manage, Connection = "ServiceBusConnectionString")]string myQueueItem, TraceWriter log)
         {
             log.Info($"C# ServiceBus queue trigger function processed message: {myQueueItem}");
         }
