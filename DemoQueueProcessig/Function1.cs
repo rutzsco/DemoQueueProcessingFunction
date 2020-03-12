@@ -11,7 +11,7 @@ namespace DemoQueueProcessig
         public static void Run([ServiceBusTrigger("myqueue1", AccessRights.Manage, Connection = "ServiceBusConnectionString")]string myQueueItem, TraceWriter log)
         {
             log.Info($"C# ServiceBus queue trigger function processed message: {myQueueItem}");
-            Thread.Sleep(15000);
+            Thread.Sleep(5000);
         }
     }
 }
